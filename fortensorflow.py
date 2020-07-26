@@ -1,8 +1,7 @@
-"""kesla"""
 import pandas as pd
 
 class DataPrep:
-    """kesla"""
+    """"""
     def __init__(self):
         data = pd.read_csv("FinancialForecast\\Data\\BIST_100_Gecmis_Verileri_Haftalik.csv")
         data_ex = pd.read_csv("FinancialForecast\\Data\\BIST_100_RSI.csv")

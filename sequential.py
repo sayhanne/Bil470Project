@@ -20,7 +20,7 @@ classifier = Sequential([
 
 classifier.compile(optimizer='adam', loss='binary_crossentropy', metrics =['accuracy'])
 
-classifier.fit(training_data, training_targets, batch_size = 5, epochs = 100)
+classifier.fit(training_data, training_targets, batch_size = 28, epochs = 100)
 
 score, acc = classifier.evaluate(test_data, test_targets,
                             batch_size=5)
@@ -28,11 +28,11 @@ print('Test score:', score)
 print('Test accuracy:', acc)
 
 
-test_pred = classifier.predict(test_data,batch_size=5)
+test_pred = classifier.predict(test_data,batch_size=14)
 total = 0
 test_pred_class = []
 for i in range(len(test_pred)):
-  if test_pred[i] > 0.41:
+  if test_pred[i] > 0.5:
     test_pred_class.append(1)
   else:
     test_pred_class.append(0)
